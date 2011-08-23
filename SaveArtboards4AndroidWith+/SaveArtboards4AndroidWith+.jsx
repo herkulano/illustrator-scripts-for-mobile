@@ -14,7 +14,7 @@ if(document && folder) {
 	for (var i = document.artboards.length - 1; i >= 0; i--){
 		document.artboards.setActiveArtboardIndex(i);
 		ab = document.artboards[i];
-		abObj = ab.name.split("#", 2);
+		abObj = ab.name.split("+", 2);
 		abName = abObj[0];
 		abFolder = abObj[1];
 		
