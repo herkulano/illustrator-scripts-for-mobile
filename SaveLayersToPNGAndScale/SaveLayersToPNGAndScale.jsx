@@ -4,21 +4,26 @@
 */
 
 var folder = Folder.selectDialog();
-var scaleTo = prompt("Scale (2=200%)" , "2");
-var suffix = prompt("Suffix" , "@2x") || "";
 var document = app.activeDocument;
 
+if(document && folder)
+	var scaleTo = prompt("Scale (2=200%)" , "2");
+
 if(document && folder && scaleTo)
-{
+	var suffix = prompt("Suffix" , "@2x") || "";
+
+if(document && folder && scaleTo) {
+	var layer, file, options;
+	
 	for (var i = document.layers.length - 1; i >= 0; i--){
-		var layer = document.layers[i];
+		layer = document.layers[i];
     if (!layer.locked) {
    		hideAllLayers();
    		layer.visible = true;
    		
-	 		var file = new File(folder.fsName + "/" + layer.name + suffix + ".png");
+	 		file = new File(folder.fsName + "/" + layer.name + suffix + ".png");
 	 		
-	 		var options = new ExportOptionsPNG24();
+	 		options = new ExportOptionsPNG24();
 	 		options.antiAliasing = true;
 	 		options.transparency = true;
 	 		options.artBoardClipping = true;
@@ -30,10 +35,11 @@ if(document && folder && scaleTo)
 	}
 }
 
-function hideAllLayers()
-{
+function hideAllLayers() {
+	var layer;
+	
 	for (var i = document.layers.length - 1; i >= 0; i--){
-		var layer = document.layers[i];
+		layer = document.layers[i];
 		if (!layer.locked) {
 			layer.visible = false;
 		}

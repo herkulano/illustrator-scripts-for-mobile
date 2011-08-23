@@ -12,18 +12,20 @@ if(document && folder) {
 	saveToRes(200, "xhdpi");
 }
 
-function saveToRes(scaleTo, folderName) {
-	var resFolder = new Folder( folder.fsName + "/" + folderName );
+function saveToRes(scaleTo, resFolderName) {
+	var ab, file, options;
+	
+	var resFolder = new Folder( folder.fsName + "/" + resFolderName );
 	if(!resFolder.exists) {
 		resFolder.create();
 	}
 	
 	for (var i = document.artboards.length - 1; i >= 0; i--){
 		document.artboards.setActiveArtboardIndex(i);
-		var artboard = document.artboards[i];
-    var file = new File(resFolder.fsName + "/" + artboard.name + ".png");
+		ab = document.artboards[i];
+    file = new File(resFolder.fsName + "/" + ab.name + ".png");
 	 	
- 		var options = new ExportOptionsPNG24();
+ 		options = new ExportOptionsPNG24();
  		options.antiAliasing = true;
  		options.transparency = true;
  		options.artBoardClipping = true;

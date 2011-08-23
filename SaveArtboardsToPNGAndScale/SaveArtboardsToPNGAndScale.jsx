@@ -4,17 +4,23 @@
 */
 
 var folder = Folder.selectDialog();
-var scaleTo = prompt("Scale (2=200%)" , "2");
-var suffix = prompt("Suffix" , "@2x") || "";
 var document = app.activeDocument;
 
+if(document && folder)
+	var scaleTo = prompt("Scale (2=200%)" , "2");
+
+if(document && folder && scaleTo)
+	var suffix = prompt("Suffix" , "@2x") || "";
+
 if(document && folder && scaleTo) {
+	var ab, file, options;
+	
 	for (var i = document.artboards.length - 1; i >= 0; i--){
 		document.artboards.setActiveArtboardIndex(i);
-		var artboard = document.artboards[i];
-    var file = new File(folder.fsName + "/" + artboard.name + suffix + ".png");
+		ab = document.artboards[i];
+    file = new File(folder.fsName + "/" + ab.name + suffix + ".png");
 	 	
- 		var options = new ExportOptionsPNG24();
+ 		options = new ExportOptionsPNG24();
  		options.antiAliasing = true;
  		options.transparency = true;
  		options.artBoardClipping = true;
