@@ -27,7 +27,10 @@ if(document && folder) {
 				break;
 			case "xh":
 				resFolderName = "xhdpi";
-				break;			
+				break;				
+			default:
+				resFolderName = "mdpi";
+				break;
 		}
 		
 		resFolder = new Folder( folder.fsName + "/" + resFolderName );
