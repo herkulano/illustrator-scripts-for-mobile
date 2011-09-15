@@ -5,7 +5,6 @@
 
 var folder = Folder.selectDialog();
 var document = app.activeDocument;
-var saveToRes;
 
 if (document && folder) {
 	saveToRes(100, "mdpi");
@@ -13,7 +12,7 @@ if (document && folder) {
 	saveToRes(200, "xhdpi");
 }
 
-saveToRes = function (scaleTo, resFolderName) {
+function saveToRes(scaleTo, resFolderName) {
 	var i, ab, 
 		file, options,
 		resFolder;
