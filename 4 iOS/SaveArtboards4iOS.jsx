@@ -5,28 +5,25 @@
 
 var folder = Folder.selectDialog();
 var document = app.activeDocument;
+var suffix;
 
 if (document && folder) {
-	saveToRes(100, "mdpi");
-	saveToRes(150, "hdpi");
-	saveToRes(200, "xhdpi");
+	suffix = prompt("Suffix", "") || "";
 }
 
-function saveToRes(scaleTo, resFolderName) {
+if (document && folder) {
+	saveToRes(100, "");
+	saveToRes(200, "@2x");
+}
+
+function saveToRes(scaleTo, densitySuffix) {
 	var i, ab, 
-		file, options,
-		resFolder;
-	
-	resFolder = new Folder(folder.fsName + "/" + resFolderName);
-	
-	if (!resFolder.exists) {
-		resFolder.create();
-	}
+		file, options;
 	
 	for (i = document.artboards.length - 1; i >= 0; i--) {
 		document.artboards.setActiveArtboardIndex(i);
 		ab = document.artboards[i];
-		file = new File(resFolder.fsName + "/" + ab.name + ".png");
+		file = new File(folder.fsName + "/" + ab.name + suffix + densitySuffix + ".png");
 		
 		options = new ExportOptionsPNG24();
 		options.antiAliasing = true;
@@ -37,4 +34,4 @@ function saveToRes(scaleTo, resFolderName) {
 		
 		document.exportFile(file, ExportType.PNG24, options);
 	}
-};
+}

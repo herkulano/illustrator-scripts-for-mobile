@@ -38,7 +38,7 @@ function saveToRes(scaleTo, densitySuffix) {
 			document.exportFile(file, ExportType.PNG24, options);
 		}
 	}
-};
+}
 
 function hideAllLayers() {
 	var i, layer;
@@ -49,4 +49,4 @@ function hideAllLayers() {
 			layer.visible = false;
 		}
 	}
-};
+}
