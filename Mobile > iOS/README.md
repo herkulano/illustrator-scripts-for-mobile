@@ -17,7 +17,7 @@ If you place the script in another location on the hard disk, you can run the sc
 2. Optionally you can add a sufix to the files.
 3. That's it, all files will be saved with the appropriate names.
 
-Exporting Layers:  
+Note on exporting layers:  
 Locked layers visibility will be ignored and also they will not be exported.
 For example, this can be used to keep global layers visibility or guide layers from being exported.
 

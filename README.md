@@ -18,7 +18,7 @@ The script asks for 3 values in sequence:
 2. The scale factor 1 = 100% = 160dpi = mdpi, 2 = 200% = 320dpi = retina display (these values are only valid if you designed for 160dpi aka mdpi).
 3. A suffix if you want to use one, e.g., @2x for retina display in iOS. You can also leave it empty or click Cancel if you don't want a suffix or if you are exporting to android or iOS non-retina.
 
-Exporting Layers:  
+Note on exporting layers:  
 Locked layers visibility will be ignored and also they will not be exported.
 For example, this can be used to keep global layers visibility or guide layers from being exported.
 
