@@ -1,6 +1,6 @@
-# Save Layers to PNGs and Scale
+# Save Layers or Artboards to PNGs with different densities
 
-I created this Adobe Illustrator Script to help export PNGs from layers for different densities (iOS Retina Display, Android Devices, etc).
+This is and Adobe Illustrator Script that exports PNGs from layers or artboards for different densities (iOS Retina Display, Android Devices, etc).
 
 ### [Buy me a coffee ;)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8KAY97ZNLT7EQ&lc=US&item_name=Herculano%20Campos&item_number=illustrator%2dscripts%2dfor%2dmobile&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
@@ -12,12 +12,10 @@ If you place the script in another location on the hard disk, you can run the sc
 
 ## How to use
 
-The script asks for 3 values in sequence:
+1. Choose the folder where you want to save the files.
+2. That's it, all files will be saved on the appropriate directories.
 
-1. The folder where you want to save the files.
-2. The scale factor 1 = 100% = 160dpi = mdpi, 2 = 200% = 320dpi = retina display (these values are only valid if you designed for 160dpi aka mdpi).
-3. A suffix if you want to use one, e.g., @2x for retina display in iOS. You can also leave it empty if you don't want a suffix or if you are exporting to android or iOS non-retina.
-
+Exporting Layers:  
 Locked layers visibility will be ignored and also they will not be exported.
 For example, this can be used to keep global layers visibility or guide layers from being exported.
 
