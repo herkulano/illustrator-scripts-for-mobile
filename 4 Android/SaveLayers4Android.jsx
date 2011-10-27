@@ -17,7 +17,7 @@ function saveToRes(scaleTo, resFolderName) {
 		file, options,
 		resFolder;
 	
-	resFolder = new Folder(folder.fsName + "/" + resFolderName);
+	resFolder = new Folder(folder.fsName + "/drawable-" + resFolderName);
 	
 	if (!resFolder.exists) {
 		resFolder.create();

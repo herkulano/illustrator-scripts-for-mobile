@@ -33,7 +33,7 @@ if (document && folder) {
 				break;
 		}
 		
-		resFolder = new Folder(folder.fsName + "/" + resFolderName);
+		resFolder = new Folder(folder.fsName + "/drawable-" + resFolderName);
 		if (!resFolder.exists) {
 			resFolder.create();
 		}
