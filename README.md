@@ -1,6 +1,6 @@
-# Save Layers to PNGs and Scale
+# Save Layers or Artboards to PNGs with different densities
 
-I created this Adobe Illustrator Script to help export PNGs from layers for different densities (iOS Retina Display, Android Devices, etc).
+I created this Adobe Illustrator Script to help export PNGs from layers or artboards for different densities (iOS Retina Display, Android Devices, etc).
 
 #### [Donate me a coffee](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8KAY97ZNLT7EQ&lc=US&item_name=Herculano%20Campos&item_number=illustrator%2dscripts%2dfor%2dmobile&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
