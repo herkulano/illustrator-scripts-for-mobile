@@ -1,4 +1,4 @@
-# Save Layers or Artboards to PNGs and Scale
+## Save Layers or Artboards to PNGs and Scale
 
 This is and Adobe Illustrator Script that exports PNGs from layers or artboards for different densities (iOS Retina Display, Android Devices, etc).
 
