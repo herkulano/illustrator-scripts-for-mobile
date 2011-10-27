@@ -1,6 +1,6 @@
 # Save Layers to PNGs and Scale
 
-I created this Adobe Illustrator Script to help me export PNGs from layers for different densities (iOS Retina Display, Android Devices, etc).
+I created this Adobe Illustrator Script to help export PNGs from layers for different densities (iOS Retina Display, Android Devices, etc).
 
 ## How to install
 
@@ -21,8 +21,7 @@ For example, this can be used to keep global layers visibility or guide layers f
 
 ## Tip
 
-If you use Effects change the Effect > Document Raster Effects Settings > Resolution to at least Medium (150ppi), so effects have enough resolution to scale. 
-Medium (150ppi) is enough for most cases if you work @1x = 160dpi = mdpi, because mdpi = 160dpi = 72ppi and xhdpi = 320dpi(retina) = 150ppi.
+If you use Effects change the Effect > Document Raster Effects Settings > Resolution to at least Medium (150ppi), so effects have enough resolution to scale.
 
 Due to the lack of optimization of the PNGs exported by Illustrator I recommend the use of a PNG optimizer.
 
