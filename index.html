@@ -9,21 +9,23 @@
     body {
       margin-top: 1.0em;
       background-color: #eee;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
+      font-family: sans-serif;
       color: #000000;
+      line-height: 1.4em;
     }
     #container {
       margin: 0 auto;
-      width: 700px;
+      width: 620px;
     }
-    h1 { font-size: 3.8em; color: #111111; margin-bottom: 3px; }
+    h1 { font-size: 2.8em; line-height: 1.1em; color: #111111; margin-bottom: 3px; }
     h1 .small { font-size: 0.4em; }
     h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #111111; }
+    h2 { font-size: 1.2em; color: #111111; margin-top: 30px; }
     h3 { text-align: center; color: #111111; }
     a { color: #111111; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
+    .description { margin-bottom: 30px; margin-top: 20px; }
+    .download { float: right; text-align: center; padding: 10px;
+    }
     pre { background: #000; color: #fff; padding: 15px;}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
@@ -40,88 +42,62 @@
         <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
       <a href="https://github.com/herkulano/illustrator-scripts-for-mobile/tarball/master">
         <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
+        <p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_donations"/>
+        <input type="hidden" name="business" value="8KAY97ZNLT7EQ"/>
+        <input type="hidden" name="lc" value="PT"/>
+        <input type="hidden" name="item_name" value="Herculano Campos"/>
+        <input type="hidden" name="item_number" value="illustratorscriptsformobile"/>
+        <input type="hidden" name="currency_code" value="EUR"/>
+        <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest"/>
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/><br />
+        </form>
+        </p>
     </div>
 
-    <h1><a href="https://github.com/herkulano/illustrator-scripts-for-mobile">illustrator-scripts</a>
-      <span class="small">by <a href="https://github.com/herkulano">herkulano</a></span></h1>
+    <h1><a href="https://github.com/herkulano/illustrator-scripts-for-mobile">Illustrator scripts for mobile design</a></h1>
 
     <div class="description">
       Collection of Illustrator scripts that exports layers or artboards to PNGs of different densities (iOS Retina Display, Android Devices, etc).
     </div>
 
-    
-      <p>This is a collection of Adobe Illustrator Scripts that exports layers or artboards to PNGs of different densities (iOS Retina Display, Android Devices, etc).
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=herkulano"></script>
+<!-- AddThis Button END -->
 
-How to install
-
-If you place the script in the Adobe Illustrator CS5/Presets/Scripts folder, the script will appear in the File > Scripts submenu.
-
-If you place the script in another location on the hard disk, you can run the script in Illustrator by choosing File > Scripts > Browse.
-
-How to use Mobile > General
-
-The general scripts asks for 3 values in sequence:
-
-The folder where you want to save the files.
-The scale factor 1 = 100% = 160dpi = mdpi, 2 = 200% = 320dpi = retina display (these values are only valid if you designed for 160dpi aka mdpi).
-A suffix if you want to use one, e.g., @2x for retina display in iOS. You can also leave it empty if you don't want a suffix or if you are exporting to android or iOS non-retina.
-How to use Mobile > iOS
-
-Choose the folder where you want to save the files.
-Optionally you can add a sufix to the files.
-That's it, all files will be saved with the appropriate names.
-How to use Mobile > Android
-
-Choose the folder where you want to save the files.
-That's it, all files will be saved on the appropriate folders.
-Note on exporting layers:
-Locked layers visibility will be ignored and also they will not be exported.
+<h2>How to install</h2>
+<p>If you place the script in the Adobe Illustrator CS5/Presets/Scripts folder, the script will appear in the File > Scripts submenu.</p>
+<p>If you place the script in another location on the hard disk, you can run the script in Illustrator by choosing File > Scripts > Browse.</p>
+<h2>How to use Mobile > General</h2>
+<p>The general scripts asks for 3 values in sequence:</p>
+<ol>
+<li>The folder where you want to save the files.</li>
+<li>The scale factor 1 = 100% = 160dpi = mdpi, 2 = 200% = 320dpi = retina display (these values are only valid if you designed for 160dpi aka mdpi).</li>
+<li>A suffix if you want to use one, e.g., @2x for retina display in iOS. You can also leave it empty if you don&#8217;t want a suffix or if you are exporting to android or iOS non-retina.</li>
+</ol>
+<h2>How to use Mobile > iOS</h2>
+<ol>
+<li>Choose the folder where you want to save the files.</li>
+<li>Optionally you can add a sufix to the files.</li>
+<li>That&#8217;s it, all files will be saved with the appropriate names.</li>
+</ol>
+<h2>How to use Mobile > Android</h2>
+<ol>
+<li>Choose the folder where you want to save the files.</li>
+<li>That&#8217;s it, all files will be saved on the appropriate folders.</li>
+</ol>
+<p>Note on exporting layers:<br />
+Locked layers visibility will be ignored and also they will not be exported.<br />
 For example, this can be used to keep global layers visibility or guide layers from being exported.</p>
+<p>
     
-
-    
-
-    
-      <h2>Install</h2>
-      <p>If you place the script in the Adobe Illustrator CS5/Presets/Scripts folder, the script will appear in the File > Scripts submenu.
-
-If you place the script in another location on the hard disk, you can run the script in Illustrator by choosing File > Scripts > Browse.</p>
-    
-
-    
-      <h2>License</h2>
-      <p>Copyright (c) 2011 http://www.herkulano.com
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
-    
-
-    
-      <h2>Authors</h2>
-      <p>Herculano Campos (herkulano@gmail.com)<br/>      </p>
-    
-
-    
-      <h2>Contact</h2>
-      <p>Herculano Campos (herkulano@gmail.com)<br/>      </p>
-    
-
     <h2>Download</h2>
     <p>
       You can download this project in either
@@ -132,10 +108,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
       by running:
       <pre>$ git clone git://github.com/herkulano/illustrator-scripts-for-mobile</pre>
     </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/herkulano/illustrator-scripts-for-mobile">herkulano/illustrator-scripts-for-mobile</a>
-    </div>
 
   </div>
 
