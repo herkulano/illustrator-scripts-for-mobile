@@ -8,7 +8,7 @@ var document = app.activeDocument;
 var suffix;
 
 if (document && folder) {
-	suffix = prompt("Suffix", "") || "";
+	suffix = prompt("Prefix", "") || "";
 }
 
 if (document && folder) {

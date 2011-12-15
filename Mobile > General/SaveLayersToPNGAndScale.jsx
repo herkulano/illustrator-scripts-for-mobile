@@ -7,11 +7,11 @@ var folder = Folder.selectDialog();
 var document = app.activeDocument;
 
 if (document && folder) {
-	var scaleTo = prompt("Scale (2=200%)", "2");
+	var scaleTo = prompt("Scale (1=100%)", "1");
 }
 
 if (document && folder && scaleTo) {
-	var suffix = prompt("Suffix", "@2x") || "";
+	var suffix = prompt("Suffix", "") || "";
 }
 
 if (document && folder && scaleTo) {
