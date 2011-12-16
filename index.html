@@ -5,11 +5,13 @@
 
   <title>herkulano/illustrator-scripts-for-mobile @ GitHub</title>
 
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300' rel='stylesheet' type='text/css'>
+
   <style type="text/css">
     body {
       margin-top: 1.0em;
       background-color: #eee;
-      font-family: sans-serif;
+      font-family: "Open Sans",sans-serif;
       color: #000000;
       line-height: 1.4em;
     }
@@ -17,13 +19,14 @@
       margin: 0 auto;
       width: 620px;
     }
-    h1 { font-size: 2.8em; line-height: 1.1em; color: #111111; margin-bottom: 3px; }
+    h1 { font-size: 3.2em; font-weight: 300; line-height: 1.1em; color: #111111; margin-bottom: 3px; }
     h1 .small { font-size: 0.4em; }
     h1 a { text-decoration: none }
-    h2 { font-size: 1.2em; color: #111111; margin-top: 30px; }
-    h3 { text-align: center; color: #111111; }
-    a { color: #111111; }
-    .description { margin-bottom: 20px; margin-top: 10px; }
+    h2 { font-size: 1.2em; color: #111111; margin-top: 35px; }
+    h3 { font-size: 1em; color: #111111; margin-top: 35px; margin-bottom:0;}
+    a { color: #1288B2; text-decoration: none; }
+    a:hover { color: #00668b; }
+    .description { margin-bottom: 25px; margin-top: 15px;font-weight: 300;}
     .download { 
       float: right;
       text-align: center;
@@ -46,6 +49,7 @@
             background-clip: padding-box;
     }
     .footer { padding: 20px 0 50px; font-style:italic; }
+    .footer a { text-decoration: none; }
   </style>
 </head>
 
@@ -77,7 +81,7 @@
     <h1><a href="https://github.com/herkulano/illustrator-scripts-for-mobile">Illustrator scripts for mobile design</a></h1>
 
     <div class="description">
-      Collection of Illustrator scripts that exports layers or artboards to PNGs of different densities (iOS Retina Display, Android Devices, etc).
+      Collection of Illustrator scripts for exporting layers or artboards to PNGs of different densities (iOS Retina Display, Android Devices, etc).
     </div>
     
     <!-- AddThis Button BEGIN -->
@@ -92,6 +96,7 @@
     <h2>How to install</h2>
     <p>If you place the script in the Adobe Illustrator CS5/Presets/Scripts folder, the script will appear in the File > Scripts submenu.</p>
     <p>If you place the script in another location on the hard disk, you can run the script in Illustrator by choosing File > Scripts > Browse.</p>
+    
     <h2>How to use Mobile > General</h2>
     <p>The general scripts asks for 3 values in sequence:</p>
     <ol>
@@ -99,21 +104,23 @@
     <li>The scale factor 1 = 100% = 160dpi = mdpi, 2 = 200% = 320dpi = retina display (these values are only valid if you designed for 160dpi aka mdpi).</li>
     <li>A suffix if you want to use one, e.g., @2x for retina display in iOS. You can also leave it empty if you don&#8217;t want a suffix or if you are exporting to android or iOS non-retina.</li>
     </ol>
+
     <h2>How to use Mobile > iOS</h2>
     <ol>
     <li>Choose the folder where you want to save the files.</li>
     <li>Optionally you can add a sufix to the files.</li>
     <li>That&#8217;s it, all files will be saved with the appropriate names.</li>
     </ol>
+    
     <h2>How to use Mobile > Android</h2>
     <ol>
     <li>Choose the folder where you want to save the files.</li>
     <li>That&#8217;s it, all files will be saved on the appropriate folders.</li>
     </ol>
-    <p>Note on exporting layers:<br />
-    Locked layers visibility will be ignored and also they will not be exported.<br />
-    For example, this can be used to keep global layers visibility or guide layers from being exported.</p>
-    <p>
+    
+    <h3>Note on exporting layers:</h3>
+    <p>Locked layers visibility will be ignored and they will not be exported.<br />
+    This can be used to keep global layers visibility, like a background, or guide layers from being exported.</p>
     
     <h2>Download</h2>
     <p>
@@ -128,7 +135,7 @@
   
 
     <div class="footer">
-      by <a href="http://www.herkulano.com">Herculano Campos</a>
+      remixed by <a href="http://www.herkulano.com">Herculano Campos</a>
     </div>
   </div>
 
