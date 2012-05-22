@@ -14,11 +14,16 @@ If you place the script in another location on the hard disk, you can run the sc
 ## How to use
 
 1. Choose the folder where you want to save the files.
-2. Optionally you can add a sufix to the files.
+2. Optionally you can add a prefix to the files.
 3. That's it, all files will be saved with the appropriate names.
 
-Note on exporting layers:  
-Locked layers visibility will be ignored and also they will not be exported.
+## Notes
+
+Artboards:
+Artboards with "!" in their name will not be exported.
+
+Layers:  
+Locked layers or with "!" in their name visibility will be ignored and will not be exported.
 For example, this can be used to keep global layers visibility or guide layers from being exported.
 
 ## Tip

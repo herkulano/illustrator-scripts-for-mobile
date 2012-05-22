@@ -7,6 +7,7 @@ var folder = Folder.selectDialog();
 var document = app.activeDocument;
 
 if (document && folder) {
+	saveToRes(75, "ldpi");
 	saveToRes(100, "mdpi");
 	saveToRes(150, "hdpi");
 	saveToRes(200, "xhdpi");
@@ -25,7 +26,7 @@ function saveToRes(scaleTo, resFolderName) {
 	
 	for (i = document.layers.length - 1; i >= 0; i--) {
 		layer = document.layers[i];
-		if (!layer.locked) {
+		if (!layer.locked && layer.name.indexOf("!") === -1) {
 			hideAllLayers();
 			layer.visible = true;
 			
@@ -48,7 +49,7 @@ function hideAllLayers() {
 	
 	for (i = document.layers.length - 1; i >= 0; i--) {
 		layer = document.layers[i];
-		if (!layer.locked) {
+		if (!layer.locked && layer.name.indexOf("!") === -1) {
 			layer.visible = false;
 		}
 	}

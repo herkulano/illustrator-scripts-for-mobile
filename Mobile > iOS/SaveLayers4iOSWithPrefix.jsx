@@ -5,6 +5,11 @@
 
 var folder = Folder.selectDialog();
 var document = app.activeDocument;
+var prefix;
+
+if (document && folder) {
+	prefix = prompt("Prefix", "") || "";
+}
 
 if (document && folder) {
 	saveToRes(100, "");
@@ -21,7 +26,7 @@ function saveToRes(scaleTo, densitySuffix) {
 			hideAllLayers();
 			layer.visible = true;
 			
-			file = new File(folder.fsName + "/" + layer.name + densitySuffix + ".png");
+			file = new File(folder.fsName + "/" + prefix + layer.name + densitySuffix + ".png");
 			
 			options = new ExportOptionsPNG24();
 			options.antiAliasing = true;

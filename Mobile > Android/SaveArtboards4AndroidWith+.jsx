@@ -19,6 +19,8 @@ if (document && folder) {
 		abFolder = abObj[1];
 		
 		switch (abFolder) {
+			case "l":
+				resFolderName = "ldpi";
 			case "m":
 				resFolderName = "mdpi";
 				break;

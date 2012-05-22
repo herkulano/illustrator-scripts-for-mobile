@@ -5,6 +5,11 @@
 
 var folder = Folder.selectDialog();
 var document = app.activeDocument;
+var prefix;
+
+if (document && folder) {
+	prefix = prompt("Prefix", "") || "";
+}
 
 if (document && folder) {
 	saveToRes(100, "");
@@ -18,7 +23,7 @@ function saveToRes(scaleTo, densitySuffix) {
 	for (i = document.artboards.length - 1; i >= 0; i--) {
 		document.artboards.setActiveArtboardIndex(i);
 		ab = document.artboards[i];
-		file = new File(folder.fsName + "/" + ab.name + densitySuffix + ".png");
+		file = new File(folder.fsName + "/" + prefix + ab.name + densitySuffix + ".png");
 		
 		options = new ExportOptionsPNG24();
 		options.antiAliasing = true;
