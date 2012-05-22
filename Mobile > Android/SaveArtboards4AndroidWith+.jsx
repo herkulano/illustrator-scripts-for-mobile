@@ -21,12 +21,14 @@ if (document && folder) {
 		switch (abFolder) {
 			case "l":
 				resFolderName = "ldpi";
+				break;
 			case "m":
 				resFolderName = "mdpi";
 				break;
 			case "h":
 				resFolderName = "hdpi";
 				break;
+			case "x":
 			case "xh":
 				resFolderName = "xhdpi";
 				break;

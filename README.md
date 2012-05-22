@@ -15,7 +15,7 @@ If you place the script in another location on the hard disk, you can run the sc
 Artboards:  
 Artboards with "!" in their name will not be exported.
 
-Layers:
+Layers:  
 Locked layers or with "!" in their name visibility will be ignored and will not be exported.
 For example, this can be used to keep global layers visibility or guide layers from being exported.
 

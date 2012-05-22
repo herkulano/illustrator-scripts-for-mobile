@@ -17,7 +17,7 @@ If you place the script in another location on the hard disk, you can run the sc
 
 ## Notes
 
-Artboards:
+Artboards:  
 Artboards with "!" in their name will not be exported.
 
 Layers:  

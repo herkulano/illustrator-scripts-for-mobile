@@ -12,10 +12,10 @@ If you place the script in another location on the hard disk, you can run the sc
 
 ## Notes
 
-Scale factor:
+Scale factor:  
 **1** = 100% = 160dpi = mdpi, **2** = 200% = 320dpi = retina display (these values are only valid if you designed for 160dpi aka mdpi).
 
-Artboards:
+Artboards:  
 Artboards with "!" in their name will not be exported.
 
 Layers:  
