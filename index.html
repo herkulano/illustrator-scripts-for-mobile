@@ -6,8 +6,8 @@
   <title>Illustrator scripts for mobile</title>
 
 	<meta name="author" content="Herculano Campos">
-	<meta name="keywords" content="illustrator, scripts, mobile, design, jsx, png, densities, export">
-	<meta name="description" content="Collection of Illustrator scripts for exporting layers or artboards to PNGs of different densities (iOS Retina Display, Android Devices, etc).">
+	<meta name="keywords" content="illustrator, scripts, mobile, design, jsx, png, densities, export, ios, ipad, android, tablet">
+	<meta name="description" content="Collection of Illustrator scripts to automatically export layers or artboards to PNGs of different densities for different devices (iOS Retina, Android, etc)">
 
   <link rel="shortcut icon" href="http://lab.herkulano.com/favicon.ico" />
 
@@ -88,7 +88,7 @@
     <h1><a href="https://github.com/herkulano/illustrator-scripts-for-mobile">Illustrator scripts for mobile design</a></h1>
 
     <div class="description">
-      Collection of Illustrator scripts for exporting layers or artboards to PNGs of different densities (iOS Retina Display, Android Devices, etc).
+      Collection of Illustrator scripts to automatically export layers or artboards to PNGs of different densities for different devices (iOS Retina, Android, etc).
     </div>
 
     <!-- AddThis Button BEGIN -->
@@ -159,11 +159,16 @@
     <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   </div>
 
-  <script>
-    var _gaq=[['_setAccount','UA-2323428-13'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2323428-13']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
   </script>
 
 </body>
