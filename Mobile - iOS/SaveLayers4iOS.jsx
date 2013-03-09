@@ -1,4 +1,4 @@
-﻿/**
+/**
 * Remixer: @herkulano (http://www.herkulano.com)
 * Thanks to: Niels Bosma (niels.bosma@motorola.com)
 */
@@ -7,11 +7,23 @@ var folder = Folder.selectDialog();
 var document = app.activeDocument;
 
 if (document && folder) {
-	saveToRes(100, "");
-	saveToRes(200, "@2x");
+	var oldWidth = Math.abs(app.activeDocument.artboards[0].artboardRect[0]-app.activeDocument.artboards[0].artboardRect[2]);
+	var newWidth = prompt("Input a new non-retina width \n(Original width: "+oldWidth+"px)", "");
+	var xScale = parseInt(newWidth)/oldWidth;
 }
 
-function saveToRes(scaleTo, densitySuffix) {
+if (document && folder && xScale) {
+	var oldHeight = Math.abs(app.activeDocument.artboards[0].artboardRect[1]-app.activeDocument.artboards[0].artboardRect[3]);
+	var newHeight = prompt("Input a new non-retina width \n(Original height: "+oldHeight+"px)", "");
+	var yScale = parseInt(newHeight)/oldHeight;
+}
+
+if (document && folder && xScale && yScale) {
+	saveToRes(100, "", xScale, yScale);
+	saveToRes(200, "@2x", xScale, yScale);
+}
+
+function saveToRes(scaleTo, densitySuffix, xScale, yScale) {
 	var i, layer, 
 		file, options;
 	
@@ -27,8 +39,8 @@ function saveToRes(scaleTo, densitySuffix) {
 			options.antiAliasing = true;
 			options.transparency = true;
 			options.artBoardClipping = true;
-			options.verticalScale = scaleTo;
-			options.horizontalScale = scaleTo;
+			options.horizontalScale = scaleTo * xScale;
+			options.verticalScale = scaleTo * yScale;
 			
 			document.exportFile(file, ExportType.PNG24, options);
 		}
