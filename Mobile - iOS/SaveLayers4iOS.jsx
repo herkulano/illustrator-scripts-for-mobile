@@ -19,11 +19,15 @@ if (document && folder && xScale) {
 }
 
 if (document && folder && xScale && yScale) {
-	saveToRes(100, "", xScale, yScale);
-	saveToRes(200, "@2x", xScale, yScale);
+	var prefix = prompt("Enter a prefix \n For instance, '16x16_' for a set of 16x16 images.", "");
 }
 
-function saveToRes(scaleTo, densitySuffix, xScale, yScale) {
+if (document && folder && xScale && yScale && prefix) {
+	saveToRes(100, "", xScale, yScale, prefix);
+	saveToRes(200, "@2x", xScale, yScale, prefix);
+}
+
+function saveToRes(scaleTo, densitySuffix, xScale, yScale, userPrefix) {
 	var i, layer, 
 		file, options;
 	
@@ -33,7 +37,7 @@ function saveToRes(scaleTo, densitySuffix, xScale, yScale) {
 			hideAllLayers();
 			layer.visible = true;
 			
-			file = new File(folder.fsName + "/" + layer.name + densitySuffix + ".png");
+			file = new File(folder.fsName + "/" + userPrefix + layer.name + densitySuffix + ".png");
 			
 			options = new ExportOptionsPNG24();
 			options.antiAliasing = true;
