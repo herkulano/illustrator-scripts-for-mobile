@@ -8,26 +8,22 @@ var document = app.activeDocument;
 
 if (document && folder) {
 	var oldWidth = Math.abs(app.activeDocument.artboards[0].artboardRect[0]-app.activeDocument.artboards[0].artboardRect[2]);
-	var newWidth = prompt("Input a new non-retina width \n(Original width: "+oldWidth+"px)", "");
+	var newWidth = prompt("Input a new non-retina width in pixels\n(Original width: "+oldWidth+")", "");
 	var xScale = parseInt(newWidth)/oldWidth;
 }
 
 if (document && folder && xScale) {
 	var oldHeight = Math.abs(app.activeDocument.artboards[0].artboardRect[1]-app.activeDocument.artboards[0].artboardRect[3]);
-	var newHeight = prompt("Input a new non-retina width \n(Original height: "+oldHeight+"px)", "");
+	var newHeight = prompt("Input a new non-retina width in pixels\n(Original height: "+oldHeight+")", "");
 	var yScale = parseInt(newHeight)/oldHeight;
 }
 
 if (document && folder && xScale && yScale) {
-	var prefix = prompt("Enter a prefix \n For instance, '16x16_' for a set of 16x16 images.", "");
+	saveToRes(100, "", xScale, yScale);
+	saveToRes(200, "@2x", xScale, yScale);
 }
 
-if (document && folder && xScale && yScale && prefix) {
-	saveToRes(100, "", xScale, yScale, prefix);
-	saveToRes(200, "@2x", xScale, yScale, prefix);
-}
-
-function saveToRes(scaleTo, densitySuffix, xScale, yScale, userPrefix) {
+function saveToRes(scaleTo, densitySuffix, xScale, yScale) {
 	var i, layer, 
 		file, options;
 	
@@ -37,7 +33,7 @@ function saveToRes(scaleTo, densitySuffix, xScale, yScale, userPrefix) {
 			hideAllLayers();
 			layer.visible = true;
 			
-			file = new File(folder.fsName + "/" + userPrefix + layer.name + densitySuffix + ".png");
+			file = new File(folder.fsName + "/" + layer.name + densitySuffix + ".png");
 			
 			options = new ExportOptionsPNG24();
 			options.antiAliasing = true;
