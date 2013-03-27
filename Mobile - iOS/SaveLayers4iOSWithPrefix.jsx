@@ -8,15 +8,27 @@ var document = app.activeDocument;
 var prefix;
 
 if (document && folder) {
-	prefix = prompt("Prefix", "") || "";
+	var oldWidth = Math.abs(app.activeDocument.artboards[0].artboardRect[0]-app.activeDocument.artboards[0].artboardRect[2]);
+	var newWidth = prompt("Input a new non-retina width in pixels \n(Original width: "+oldWidth+")", "");
+	var xScale = parseInt(newWidth)/oldWidth;
 }
 
-if (document && folder) {
-	saveToRes(100, "");
-	saveToRes(200, "@2x");
+if (document && folder && xScale) {
+	var oldHeight = Math.abs(app.activeDocument.artboards[0].artboardRect[1]-app.activeDocument.artboards[0].artboardRect[3]);
+	var newHeight = prompt("Input a new non-retina width in pixels \n(Original height: "+oldHeight+")", "");
+	var yScale = parseInt(newHeight)/oldHeight;
 }
 
-function saveToRes(scaleTo, densitySuffix) {
+if (document && folder && xScale && yScale) {
+	prefix = prompt("Enter a prefix \n For instance, '16x16_' for a set of 16x16 images.", "") || "";
+}
+
+if (document && folder && xScale && yScale && prefix) {
+	saveToRes(100, "", xScale, yScale);
+	saveToRes(200, "@2x", xScale, yScale);
+}
+
+function saveToRes(scaleTo, densitySuffix, xScale, yScale) {
 	var i, layer, 
 		file, options;
 	
@@ -32,8 +44,8 @@ function saveToRes(scaleTo, densitySuffix) {
 			options.antiAliasing = true;
 			options.transparency = true;
 			options.artBoardClipping = true;
-			options.verticalScale = scaleTo;
-			options.horizontalScale = scaleTo;
+			options.horizontalScale = scaleTo * xScale;
+			options.verticalScale = scaleTo * yScale;
 			
 			document.exportFile(file, ExportType.PNG24, options);
 		}
