@@ -12,13 +12,9 @@ if (document && folder) {
 	oldWidth = Math.abs(app.activeDocument.artboards[0].artboardRect[0]-app.activeDocument.artboards[0].artboardRect[2]);
 	newWidth = prompt("Input a new non-retina width in pixels \n(Original width: "+oldWidth+")", oldWidth);
 	xyScale = parseInt(newWidth)/oldWidth || 1;
-}
 
-if (document && folder && xyScale) {
 	prefix = prompt("Enter a prefix \n For instance, '16x16_' for a set of 16x16 images.", "") || "";
-}
 
-if (document && folder && xyScale && prefix) {
 	saveToRes(100, "", xyScale);
 	saveToRes(200, "@2x", xyScale);
 }
