@@ -17,7 +17,7 @@ if (document && folder) {
 		abObj = ab.name.split("+", 2);
 		abName = abObj[0];
 		abFolder = abObj[1];
-		
+
 		switch (abFolder) {
 			case "l":
 				resFolderName = "ldpi";
@@ -36,21 +36,21 @@ if (document && folder) {
 				resFolderName = "mdpi";
 				break;
 		}
-		
+
 		resFolder = new Folder(folder.fsName + "/drawable-" + resFolderName);
 		if (!resFolder.exists) {
 			resFolder.create();
 		}
-		
+
 		file = new File(resFolder.fsName + "/" + abName + ".png");
-		
+
 		options = new ExportOptionsPNG24();
 		options.antiAliasing = true;
 		options.transparency = true;
 		options.artBoardClipping = true;
 		options.verticalScale = 100;
 		options.horizontalScale = 100;
-		
+
 		document.exportFile(file, ExportType.PNG24, options);
-	}	
+	}
 }
