@@ -2,8 +2,6 @@
 
 This is a collection of Adobe Illustrator Scripts that exports layers or artboards to PNGs of different densities (iOS Retina Display, Android Devices, etc).
 
-### [Buy me a coffee ;)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8KAY97ZNLT7EQ&lc=US&item_name=Herculano%20Campos&item_number=illustrator%2dscripts%2dfor%2dmobile&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
-
 ## How to install
 
 If you place the script in the Adobe Illustrator CS5/Presets/Scripts folder, the script will appear in the File > Scripts submenu.
