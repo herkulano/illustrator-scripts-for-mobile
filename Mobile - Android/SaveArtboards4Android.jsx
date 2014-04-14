@@ -7,37 +7,38 @@ var folder = Folder.selectDialog();
 var document = app.activeDocument;
 
 if (document && folder) {
-	saveToRes(75, "ldpi");
 	saveToRes(100, "mdpi");
 	saveToRes(150, "hdpi");
 	saveToRes(200, "xhdpi");
+	saveToRes(300, "xxhdpi");
+	saveToRes(400, "xxxhdpi");
 }
 
 function saveToRes(scaleTo, resFolderName) {
-	var i, ab,
+	var i, ab, 
 		file, options,
 		resFolder;
-
+	
 	resFolder = new Folder(folder.fsName + "/drawable-" + resFolderName);
-
+	
 	if (!resFolder.exists) {
 		resFolder.create();
 	}
-
+	
 	for (i = document.artboards.length - 1; i >= 0; i--) {
 		document.artboards.setActiveArtboardIndex(i);
 		ab = document.artboards[i];
-
+		
 		if (ab.name.indexOf("!") === -1) {
 			file = new File(resFolder.fsName + "/" + ab.name + ".png");
-
+			
 			options = new ExportOptionsPNG24();
 			options.antiAliasing = true;
 			options.transparency = true;
 			options.artBoardClipping = true;
 			options.verticalScale = scaleTo;
 			options.horizontalScale = scaleTo;
-
+			
 			document.exportFile(file, ExportType.PNG24, options);
 		};
 	}
