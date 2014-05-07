@@ -59,16 +59,14 @@
     .author a { text-decoration: none; }
   </style>
 
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-2323428-13']);
-    _gaq.push(['_trackPageview']);
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+  ga('create', 'UA-2323428-13', 'github.com');
+  ga('send', 'pageview');
   </script>
 </head>
 
@@ -91,7 +89,7 @@
     </div>
 
     <h2>How to install</h2>
-    <p>If you place the script in the Adobe Illustrator CS5/Presets/Scripts folder, the script will appear in the File > Scripts submenu.</p>
+    <p>If you place the script in the Adobe Illustrator/Presets/Scripts folder, the script will appear in the File > Scripts submenu.</p>
     <p>If you place the script in another location on the hard disk, you can run the script in Illustrator by choosing File > Scripts > Browse.</p>
 
     <h2>How to use Mobile > General</h2>
@@ -129,7 +127,6 @@
       by running:
       <pre>$ git clone git://github.com/herkulano/illustrator-scripts-for-mobile</pre>
     </p>
-
 
     <div class="author">
       remixed by <a href="http://www.herkulano.com">Herculano Campos</a>
