@@ -7,6 +7,7 @@ var folder = Folder.selectDialog();
 var document = app.activeDocument;
 
 if (document && folder) {
+	saveToRes(75, "ldpi");
 	saveToRes(100, "mdpi");
 	saveToRes(150, "hdpi");
 	saveToRes(200, "xhdpi");
@@ -29,8 +30,10 @@ function saveToRes(scaleTo, resFolderName) {
 		document.artboards.setActiveArtboardIndex(i);
 		ab = document.artboards[i];
 		
-		if (ab.name.indexOf("!") === -1) {
-			file = new File(resFolder.fsName + "/" + ab.name + ".png");
+		if (ab.name.indexOf("#") !== -1) {
+			abObj = ab.name.split("#", 2);
+			abName = abObj[0];
+			file = new File(resFolder.fsName + "/" + abName + ".png");
 			
 			options = new ExportOptionsPNG24();
 			options.antiAliasing = true;
