@@ -12,8 +12,9 @@ if (document && folder) {
 }
 
 if (document && folder) {
-	saveToRes(100, "");
-	saveToRes(200, "@2x");
+	saveToRes(50, "");
+	saveToRes(100, "@2x");
+	saveToRes(150, "@3x");
 }
 
 function saveToRes(scaleTo, densitySuffix) {
