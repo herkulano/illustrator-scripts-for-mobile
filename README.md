@@ -39,3 +39,7 @@ Due to the lack of optimization of the PNGs exported by Illustrator I recommend 
 ### License
 
 [BSD](https://github.com/herkulano/illustrator-scripts-for-mobile/blob/master/LICENSE)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/herkulano/illustrator-scripts-for-mobile/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
