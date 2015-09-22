@@ -41,5 +41,4 @@ Due to the lack of optimization of the PNGs exported by Illustrator I recommend 
 [BSD](https://github.com/herkulano/illustrator-scripts-for-mobile/blob/master/LICENSE)
 
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/herkulano/illustrator-scripts-for-mobile/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
+[![Analytics](https://ga-beacon.appspot.com/UA-67903380-1/illustrator-scripts-for-mobile/)](https://github.com/igrigorik/ga-beacon)
