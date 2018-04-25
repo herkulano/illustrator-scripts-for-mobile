@@ -1,3 +1,5 @@
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 ### Collection of Illustrator Scripts for Mobile
 
 This is a collection of Adobe Illustrator Scripts that exports layers or artboards to PNGs of different densities (iOS Retina Display, Android Devices, etc).
